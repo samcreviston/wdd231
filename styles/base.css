@@ -1,3 +1,9 @@
+* {
+    margin: none;
+    padding: none;
+    max-width: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -17,7 +23,20 @@ header {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+#burger-menu {
+    display: none;
+    float: right;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    margin: 10px;
+
     
+}
+
+#burger-menu img {
+    width: 50px;
 }
 
 h1  {
@@ -33,16 +52,16 @@ h1  {
 }
 
 #nameText {
-    color: rgb(240, 240, 76);
-    font-size: 1.3em;
+    font-size: 1.8em;
 }
 
 footer {
     background-color: rgb(65, 91, 126);
+    padding: 1px 0px 15px 0px;
 }
 
 nav {
-    background-color: rgb(55, 59, 59);
+    background-color: rgb(10, 10, 10);
     display: flex;
     justify-content: center;
     gap: 12.5%;
@@ -50,12 +69,27 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgb(201, 45, 71);
     color: white;
 }
 
 nav :hover {
+    color: rgb(201, 45, 71);
+}
 
+#drop-down {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 8px 0px;
+}
+
+#drop-down a {
+    display: block;
+    font-size: 1.5em;
+    padding: 2px;
 }
 
 main {
@@ -100,35 +134,122 @@ main {
     color: black;
 }
 
+li::marker {
+    color: rgb(201, 45, 71);
+}
+
 #img-me {
     width: 20%;
     margin: 20px;
 }
 
-#flag {
-    width: 180%;
-    margin: 20px;
+#sec2 {
+    justify-content: center;
 }
 
-#flag-name {
+#tree-img {
+    max-width: 80%;
+    margin-top: 10px;
+}
+
+#sec2 p {
     font-style: italic;
-    font-size: 90%;
-    margin-bottom: 0px;
+    font-size: small;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#sec3 {
+    grid-column: span 3;
+}
+
+#filter-buttons-nav {
+    background-color: white;
+    justify-content: center;
+    gap: 1%;
+}
+
+.filter-button {
+    margin: 8px 0px;
+    width: 100px;
+
+    background-color: black;
+    color: white;
+    font-weight: 540;
+    border-radius: 5px;
+}
+
+#class-sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #img-flag {
-    border: 1px solid grey;
-    width: 100%;
+    max-width: 75px;
+    margin-left: 20px;
 }
 
 #dev-links{
     display: flex;
-    height: 90%;
     text-align: left;
     align-items: center;
 }
 
+#footer-sec {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+}
+
 #lastModified {
-    color: rgb(240, 240, 76);
+    color: rgb(231, 172, 219);
     font-size: small;
+}
+
+#drop-down {
+    display: none; /* Initially hidden */
+}
+
+#drop-down.show {
+    display: block; /* Shown when the 'show' class is added */
+}
+
+#courses-sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.course {
+    color: black;
+    background-color: lightgray;
+    border-color: gray;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+.completed {
+    color: white;
+    background-color: rgb(201, 45, 71);
+}
+
+@media screen and (max-width: 575px) {
+    #burger-menu {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    main {
+        display: block;
+        grid-template-columns: 1fr;
+
+    }
+
+    .card {
+        border: 1px solid rgb(219, 219, 219);
+        margin: 10px;
+    }
 }
