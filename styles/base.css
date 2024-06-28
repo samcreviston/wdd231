@@ -1,6 +1,4 @@
 * {
-    margin: none;
-    padding: none;
     max-width: 100%;
 }
 
@@ -12,7 +10,6 @@ body {
     color: white;
 
     font-family: "Reddit Sans Condensed", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
@@ -20,7 +17,6 @@ body {
 header {
     background-color: rgb(65, 91, 126);
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
