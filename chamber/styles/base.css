@@ -1,0 +1,183 @@
+* {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(44, 91, 151);
+    text-align: center;
+    color: white;
+
+    font-family: "Reddit Sans Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(44, 91, 151);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#burger-menu {
+    display: none;
+    float: right;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    margin: 10px;
+}
+
+#burger-menu img {
+    width: 50px;
+}
+
+h1  {
+    display: flex;
+
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#titleText {
+    font-size: 2em;
+    margin-bottom: -10px;
+}
+
+footer {
+    background-color: rgb(44, 91, 151);
+    padding: 1px 0px 15px 0px;
+}
+
+nav {
+    display: flex;
+    gap: 4rem;
+    font-size: small;
+}
+
+nav a {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: white;
+    color: white;
+}
+
+nav :hover {
+    
+}
+
+#drop-down {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 8px 0px;
+}
+
+#drop-down a {
+    display: block;
+    font-size: 1.5em;
+    padding: 2px;
+}
+
+main {
+    background-color: white;
+    max-width: 10000px;
+    color: black;
+    padding-bottom: 20px;
+    max-width: 100%;
+}
+
+#hero-img {
+    width: 100%;
+}
+
+#main-title {
+    margin: 10px 80px;
+    font-size: 3rem;
+}
+
+button {
+    background-color: rgb(44, 91, 151);
+    color: white;
+    font-size: 1rem;
+    border: 0px;
+    border-radius: 4px;
+    width: 100px;
+    height: 30px;
+}
+
+#member-block {
+    display: flex;
+    gap: 15px;
+}
+
+#member-block img {
+    width: 200px;
+}
+
+#member-block section {
+    margin: 30px;
+}
+
+#member-list img {
+    width: 400px;
+}
+
+#member-list section {
+    margin: 80px;
+}
+
+#img-commerce-sign {
+    width: 15%;
+    margin: 20px;
+}
+
+
+#footer-sec {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+#lastModified {
+    color: white;
+    font-size: small;
+}
+
+#drop-down {
+    display: none; /* Initially hidden */
+}
+
+#drop-down.show {
+    display: block; /* Shown when the 'show' class is added */
+}
+
+@media screen and (max-width: 575px) {
+    #burger-menu {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    main {
+        display: block;
+        grid-template-columns: 1fr;
+
+    }
+
+    .card {
+        border: 1px solid rgb(219, 219, 219);
+        margin: 10px;
+    }
+}

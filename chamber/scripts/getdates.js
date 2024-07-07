@@ -6,7 +6,6 @@ if (cYearElement) {
     cYearElement.textContent = currentYear;
 }
 
-//Assignment stated: "You do not need to alter the document.lastModified native format".
 if (lastModElement) {
     const modified = new Date(document.lastModified);
     lastModElement.textContent = "last modified: " + modified;
@@ -17,10 +16,8 @@ if (lastModElement) {
 <section id="footer-sec">
         <p>
             &copy;<span id="currentyear"></span>
-            - Sam Creviston - Georgia
-            <!--  or currentYear?  -->
+
         </p>
-        <img src="images/GeorgiaFlag.png" alt="Georgia Flag" id="img-flag">
         </section>
         <p id="lastModified"></p>
 */

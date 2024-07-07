@@ -14,18 +14,43 @@
 
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="favicon.ico">
-    <script src="scripts/directory.js"></script>
-    <script src="scripts/getdates.js"></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
     
     <title>Directory for the Chamber of Commerce - Atlanta</title>
  </head>
  <body>
     <header>
-
+        <button id="burger-menu"><img src="images/120px-Hamburger_icon_white.svg.png" alt="menu"></button>
+        <section id="title"><img src="images/c-of-commerce-sign.jpg" alt="self portrait" id="img-commerce-sign"> 
+            <section id="header-title">
+                <h1 id="titleText">Atlanta</h1>
+                <h4>Chamber of Commerce</h4>
+            </section>
+        </section>
+        <section>
+            <nav>
+                <a href="../index.html"><h1>Home</h1></a>
+                <a href="./directory.html"><h1>Directory</h1></a>
+                <a href="./join.html"><h1>Join</h1></a>
+                <a href="./discover.html"><h1>Discover</h1></a>
+            </nav>
+        </section>
+        
     </header>
     <main>
-        <img src="images/atlanta-hero.jpg" alt="city of Atlanta">
-        <h1>Directory</h1>
+        <section id="drop-down"></section>
+        <img id="hero-img" src="images/atlanta-hero.jpg" alt="city of Atlanta">
+        <section id="directory-header">
+            <h1 id="main-title">Directory</h1>
+            <section id="filter-menu">
+                <h3>View:</h3>
+                <button id="list">list</button>
+                <button id="block">block</button>
+                <section id="member-block"></section>
+                <section id="member-list"></section>
+            </section>
+        </section>
 
     </main>
     <footer>
@@ -33,7 +58,6 @@
             <p>
                 &copy;<span id="currentyear"></span>
                 - Sam Creviston - Georgia
-                <!--  or currentYear?  -->
             </p>
             </section>
             <p id="lastModified"></p>
