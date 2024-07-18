@@ -108,8 +108,8 @@ button {
     font-size: 1rem;
     border: 0px;
     border-radius: 4px;
-    width: 100px;
-    height: 30px;
+    width: 105px;
+    height: 35px;
 }
 
 #member-block {
@@ -235,13 +235,25 @@ label {
     margin-bottom: 4px;
 }
 
-input {
+input, select {
     margin-bottom: 16px;
 }
 
-button {
-    margin-top: 16px;
+textarea {
+    margin-bottom: 20px;
 }
+
+.membership-levels {
+    grid-template-columns: 1fr;
+    margin: 20px 60px;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08)
+}
+
+
 
 
 @media screen and (max-width: 575px) {

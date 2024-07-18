@@ -21,7 +21,7 @@
 </head>
 <body>
    <header>
-       <button id="burger-menu"><img src="images/120px-Hamburger_icon_white.svg.png" alt="menu"></button>
+       <button id="burger-menu"><img src="images/120px-Hamburger_icon_white.svg.png" alt="menu">Learn More</button>
        <section id="title"><img src="images/c-of-commerce-sign.webp" alt="self portrait" id="img-commerce-sign"> 
            <section id="header-title">
                <h1 id="titleText">Atlanta</h1>
@@ -72,11 +72,45 @@
                 <option value="level4">Level 4</option>
                 </select>
 
+                <label for="description">Business/Organization Description:</label>
+                <textarea name="description" id="description" rows="3" maxlength="850"></textarea>
+
                 <input type="hidden" id="timestamp" name="timestamp" value="" />
 
             
                 <button type="submit">Submit</button>
             </form>
+
+            <section id="membership-cards">
+                <section class="membership-levels">
+                    <h2> Non Profit Membership</h2>
+                    <button id="learn-more-1">Learn More</button>
+
+                </section>
+                <dialog id="level-1"></dialog>
+
+                <section class="membership-levels">
+                    <h2> Bronze Membership</h2>
+                    <button id="learn-more-2">Learn More</button>
+
+                </section>
+                <dialog id="level-2"></dialog>
+
+                <section class="membership-levels">
+                    <h2> Silver Membership</h2>
+                    <button id="learn-more-3">Learn More</button>
+
+                </section>
+                <dialog id="level-3"></dialog>                
+
+                <section class="membership-levels">
+                    <h2> Gold Membership</h2>
+                    <button id="learn-more-4">Learn More</button>
+
+                </section>
+                <dialog id="level-4"></dialog>
+
+            </section>
         </section>
 
    </main>
