@@ -84,6 +84,7 @@ function displayForecastResults(data) {
 }
 
 
+
 const memberSection = document.querySelector("#business-cards");
 
 async function getMemberData() {
