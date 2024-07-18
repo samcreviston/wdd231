@@ -161,6 +161,55 @@ button {
     display: block; /* Shown when the 'show' class is added */
 }
 
+/* below is for the Home page*/
+main a {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+#event-weather-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cards {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.cards h4 {
+    background-color: rgb(44, 91, 151);
+    color: white;
+    margin-top: 0px;
+    padding: 5px 0px;
+}
+
+#events {
+    grid-column: span 2;
+}
+
+#card-title {
+    margin-bottom: 0px;
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+}
+
+#weather-icon {
+    height: 40px;
+    width: 40px
+}
+
+#business-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
 @media screen and (max-width: 575px) {
     #burger-menu {
         display: block;
@@ -174,6 +223,10 @@ button {
         display: block;
         grid-template-columns: 1fr;
 
+    }
+
+    #event-weather-section, #business-cards {
+        display: block;
     }
 
     .card {
