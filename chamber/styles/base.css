@@ -94,6 +94,7 @@ main {
 
 #hero-img {
     width: 100%;
+    aspect-ratio: 3.2/1;
 }
 
 #main-title {
@@ -168,6 +169,7 @@ main a {
 #event-weather-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    aspect-ratio: 5/1;
 }
 
 .cards {
