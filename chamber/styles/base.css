@@ -177,7 +177,7 @@ main a {
 .cards {
     border: 1px solid black;
     border-radius: 4px;
-    margin: 10px;
+    margin: 20px;
 }
 
 .cards h4 {
@@ -209,6 +209,10 @@ main a {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+#business-cards img {
+    max-height: 40%;
+    max-width: 40%;
+}
 
 
 @media screen and (max-width: 575px) {
