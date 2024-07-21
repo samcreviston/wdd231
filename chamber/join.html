@@ -17,7 +17,7 @@
    <script src="scripts/join.js" defer></script>
    <script src="scripts/getdates.js" defer></script>
    
-   <title>Home - Chamber of Commerce - Atlanta</title>
+   <title>Join - Chamber of Commerce - Atlanta</title>
 </head>
 <body>
    <header>
@@ -44,7 +44,7 @@
         <h1 id="main-title">Join</h1>
 
         <section id="main-grid">
-            <form id="form-grid">
+            <form id="form-grid" action="thankyou.html" method="get">
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required autocomplete="given-name" title="Enter your first name">
             
@@ -78,7 +78,7 @@
                 <input type="hidden" id="timestamp" name="timestamp" value="" />
 
             
-                <button type="submit">Submit</button>
+                <button type="submit" id="submit">Join</button>
             </form>
 
             <!-- membership cards containing the buttons that open the dialog description of each membership level. Dialog contains membership level and one sentence description, then a button to close the dialog -->

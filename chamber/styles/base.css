@@ -258,6 +258,17 @@ dialog {
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.18);
 }
 
+/* Below is for the thank you page */
+#thank-you-section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#thank-you-title {
+    margin: 16px;
+    font-size: 5rem;
+}
 
 @media screen and (max-width: 575px) {
     #burger-menu {

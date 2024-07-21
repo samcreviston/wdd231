@@ -17,6 +17,8 @@ const closeSilverDialog = document.querySelector("#close-silver");
 const closeGoldDialog = document.querySelector("#close-gold");
 
 
+
+
 /* function to open the dialogs when each button is clicked for the varying membership levels */
 function openDialogue(buttonId, dialogueId) {
     const button = document.querySelector(`#${buttonId}`);
@@ -52,3 +54,11 @@ closeSilverDialog.addEventListener("click", () => {
 closeGoldDialog.addEventListener("click", () => {
     goldDialog.close();
 });
+
+const submitButton = document.querySelector("#submit");
+
+ /* poulate the timestamp upon click of submit button */   
+ submitButton.addEventListener("click", () => {
+    const timestamp = new Date().toLocaleString();
+    document.querySelector("#timestamp").value = timestamp;
+ });
