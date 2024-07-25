@@ -4,8 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        video {
+            max-width: 1000px;
+        }
+        #progressBar {
+            width: 1000px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #progress {
+            width: 0%;
+            height: 10px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+        button {
+            padding: 25px;
+        }
+    </style>
 </head>
 <body>
-    <video src=""></video>
+    <video id="myVideo" src="videos/Lair of Legends Campaigns and 4 more pages - Personal - Microsoft​ Edge 2024-07-25 01-33-59.mp4"></video>
+    <div id="progressBar">
+        <div id="progress"></div>
+    </div>
+    <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+    <button id="playPauseButton">Play/Pause</button>
+
+    <script>
+        const video = document.getElementById('myVideo');
+        const playPauseButton = document.getElementById('playPauseButton');
+        const progressBar = document.getElementById('progressBar');
+        const progress = document.getElementById('progress');
+        const currentTimeSpan = document.getElementById('currentTime');
+        const durationSpan = document.getElementById('duration');
+
+        video.addEventListener('loadedmetadata', () => {
+            durationSpan.textContent = formatTime(video.duration);
+        });
+
+        video.addEventListener('timeupdate', () => {
+            const progressWidth = (video.currentTime / video.duration) * 100;
+            progress.style.width = `${progressWidth}%`;
+            currentTimeSpan.textContent = formatTime(video.currentTime);
+        });
+
+        playPauseButton.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                playPauseButton.textContent = 'Pause';
+            } else {
+                video.pause();
+                playPauseButton.textContent = 'Play';
+            }
+        });
+
+        progressBar.addEventListener('click', (e) => {
+            const progressBarWidth = progressBar.offsetWidth;
+            const clickPosition = e.offsetX;
+            const newTime = (clickPosition / progressBarWidth) * video.duration;
+            video.currentTime = newTime;
+        });
+
+        function formatTime(time) {
+            const minutes = Math.floor(time / 60);
+            const seconds = Math.floor(time % 60);
+            return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }
+    </script>
 </body>
 </html>
