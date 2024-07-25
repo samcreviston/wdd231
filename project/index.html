@@ -19,8 +19,9 @@
     <title>Lair of Legends Campaigns</title>
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
     <header>
-        <img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo">
+        <button class="return-to-home"><img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo" loading="lazy"></button>
         <section id="title-section">
             <h1 id="main-title">Lair of Legends Campaigns</h1>
         <h2 id="main-subtitle">The Home of 5e Campaigns, Modules, and One-shots</h2>
@@ -36,7 +37,7 @@
          </section>
          
          <!-- campaign section -->
-        <h2 id="content-section-title">Contents</h2>
+        <h2 id="content-section-title" class="narrow-main">Contents</h2>
 
         <!-- toggle switch for on or off condensed list -->
         <div id="toggle-switch">
@@ -50,7 +51,7 @@
         </div>
 
         
-        <section id="campaign-list-section"> <!-- list of campaigns pulled from an array from a json file, filterable as compact list or as full list -->
+        <section id="campaign-list-section" class="narrow-main"> <!-- list of campaigns pulled from an array from a JSON file, filterable as compact list or as full list -->
     </section>
     
 
@@ -63,8 +64,8 @@
             <label for="campaignName">Campaign Name:</label>
             <input type="text" id="campaignName" name="campaignName" title="Campaign Name" pattern="^[A-Za-z\s-]{4,}$" required><br>
 
-            <label for="description">Business/Organization Description:</label><br>
-            <textarea id="description" name="description" title="Business/Organization Description" required></textarea><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" title="Description" required></textarea><br>
 
             <label for="adventureCount">Adventure Count:</label>
             <select id="adventureCount" name="adventureCount" title="Adventure Count">
@@ -144,6 +145,8 @@
             <input type="hidden" id="timestamp" name="timestamp" value=""><br>
 
             <button type="submit" id="submit-campaign">Enter Campaign Outline for LoL Approval</button>
+            <br>
+            <br>
         </form>
     </dialog>
 
@@ -156,7 +159,7 @@
                 - Sam Creviston - Georgia
             </p>
             </section>
-            <img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo">
+            <img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo" loading="lazy">
             <p id="lastModified"></p>
     </footer>
 </body>

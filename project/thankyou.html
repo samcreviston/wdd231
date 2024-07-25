@@ -14,13 +14,13 @@
     <link rel="icon" href="images/lol-favicon.ico">
 
     <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 
     <title>Lair of Legends Campaigns</title>
 </head>
 <body>
     <header>
-        <img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo">
+        <img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo" loading="lazy">
         <section id="title-section">
             <h1 id="main-title">Lair of Legends Campaigns</h1>
         <h2 id="main-subtitle">The Home of 5e Campaigns, Modules, and One-shots</h2>
@@ -29,10 +29,18 @@
     </header>
 
     <main>
+        <!-- Thank you message -->
         <h1 id="thank-you">Thank you for your Lair of Legends content submission!</h1>
         <p class="thank-you-p">Return to the main menu for exploration, enter another campaign, or review your submission below.</p>
 
-        <button class="return to home" class="thank-you-p"><p>Return to Home</p></button>
+        <br>
+        <button class="return-to-home" class="thank-you-p"><p>Return to Home</p></button>
+        <br>
+        <br>
+
+        <!-- display submission details -->
+        <h2>Submission Details:</h2>
+        <section id="form-section"></section>
 
 
 
@@ -45,8 +53,8 @@
             <label for="campaignName">Campaign Name:</label>
             <input type="text" id="campaignName" name="campaignName" title="Campaign Name" pattern="^[A-Za-z\s-]{4,}$" required><br>
 
-            <label for="description">Business/Organization Description:</label><br>
-            <textarea id="description" name="description" title="Business/Organization Description" required></textarea><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" title="Description" required></textarea><br>
 
             <label for="adventureCount">Adventure Count:</label>
             <select id="adventureCount" name="adventureCount" title="Adventure Count">
@@ -126,6 +134,8 @@
             <input type="hidden" id="timestamp" name="timestamp" value=""><br>
 
             <button type="submit" id="submit-campaign">Enter Campaign Outline for LoL Approval</button>
+            <br>
+            <br>
         </form>
     </dialog>
 
@@ -138,7 +148,7 @@
                 - Sam Creviston - Georgia
             </p>
             </section>
-            <img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo">
+            <img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo" loading="lazy">
             <p id="lastModified"></p>
     </footer>
 </body>

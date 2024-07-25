@@ -14,13 +14,13 @@
     <link rel="icon" href="images/lol-favicon.ico">
 
     <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/beryllium.js" defer></script>
 
     <title>LoL - Beryllium Paradox Module</title>
 </head>
 <body>
     <header>
-        <img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo">
+        <button class="return-to-home"><img id="header-logo" src="images/lol-logo-fit.jpg" alt="Lair of Legends logo" loading="lazy"></button>
         <section id="title-section">
             <h1 id="main-title">Lair of Legends Campaigns</h1>
         <h2 id="main-subtitle">The Home of 5e Campaigns, Modules, and One-shots</h2>
@@ -29,6 +29,31 @@
     </header>
 
     <main>
+        <!-- Introduction -->
+        <h1 class="campaign-header"> The Beryllium Paradox</h1>
+        <p class="flavor-text">Is living forever a life of freedom or limitation? Come party a little, inquire some here, and fight some there as you bring light to Captains Bardur's <secrets class=""></secrets></p>
+        <p class="author">By Sam Creviston</p>
+
+        <!-- Adventures -->
+        <section class="adventure">
+            <h2 class="adventure-header">1.All Aboard and All For You</h2>
+            <p class="adventure-content">Whether each member came by purchasing a ticket, receiving a formal invitation, or winning the local adventurer guild's raffle, each party member steps aboard the timeless and breathtaking <i>Beryllium Paradox</i>, a skyship like no other, traveling through floating islands of the Skyborn Shattered Isles. </p>
+            <br>
+            <br>
+            <p class="adventure-content">While there are no pirate attacks or mutinies today, the ship seems to be moving at an incredible speed. causing concern to the crew. Upon investigation, the party finds from the crew and the Captains Journal that a captain of the Beryllium Paradox lives for 1000 years, at which time the boat soars at great speed to it's origin, a land of the old ones who built their civilizations above the world for peace and innovation. While the old ones are long gone, their mechanical golems will destroy any being stepping foot upon the island that is not of the old ones, therefore making it a challenge to retrieve the materials that the Captain wrote down as necessary to re embark on the Beryllium Paradox's journey. Before that though they must deal with the
+                <div class="hover-trigger">
+                    Golems
+                    <div class="modal">
+                        <span class="modal-content" id="hover-iron-golem">
+                        </span>
+                    </div>
+                </div>
+                <div class="adventure-content">at the ready to clear the docking ship!</div>
+            </div>
+        </div>    
+            </p>
+            <p class="DM-note"></p>
+        </section>
        
 
 
@@ -41,8 +66,8 @@
                 <label for="campaignName">Campaign Name:</label>
                 <input type="text" id="campaignName" name="campaignName" title="Campaign Name" pattern="^[A-Za-z\s-]{4,}$" required><br>
     
-                <label for="description">Business/Organization Description:</label><br>
-                <textarea id="description" name="description" title="Business/Organization Description" required></textarea><br>
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description" title="Description" required></textarea><br>
     
                 <label for="adventureCount">Adventure Count:</label>
                 <select id="adventureCount" name="adventureCount" title="Adventure Count">
@@ -123,6 +148,8 @@
                 <input type="hidden" id="timestamp" name="timestamp" value=""><br>
     
                 <button type="submit" id="submit-campaign">Enter Campaign Outline for LoL Approval</button>
+                <br>
+                <br>
             </form>
         </dialog>
 

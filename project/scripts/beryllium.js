@@ -7,11 +7,8 @@ homeButton.addEventListener("click", function() {
 
 
 //DND API fetch section and populating elements
-const undeadKnight = "monsters/animated-armor";
-const undeadKnightModal = document.getElementById("hover-undead-knight");
-
-const whiteDragon = "monsters/white-dragon-wyrmling";
-const whiteDragonModal = document.getElementById("hover-white-dragon");
+const ironGolem = "monsters/iron-golem";
+const ironGolemModal = document.getElementById("hover-iron-golem");
 
 async function getAPIData(path) {
   const response = await fetch(`https://www.dnd5eapi.co/api/${path}`);
@@ -61,14 +58,9 @@ async function createStatBlock(stats, element) {
 
 }
 
-getAPIData(undeadKnight).then((undeadKnightStats) => {
-  console.log(undeadKnightStats)
-  createStatBlock(undeadKnightStats, undeadKnightModal);
-});
-
-getAPIData(whiteDragon).then((whiteDragonStats) => {
-  console.log(whiteDragonStats)
-  createStatBlock(whiteDragonStats, whiteDragonModal);
+getAPIData(ironGolem).then((ironGolemStats) => {
+  console.log(ironGolemStats)
+  createStatBlock(ironGolemStats, ironGolemModal);
 })
 
 

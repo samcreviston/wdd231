@@ -128,7 +128,7 @@ header {
 }
 
 h1 {
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
     padding: 20px;
     font-weight: 500px;
     font-size: 3rem;
@@ -138,8 +138,9 @@ h1 {
 }
 
 #header-logo {
-    max-width: 90px;
-    margin: 20px 0px 0px 20px;
+    max-width: 100px;
+    margin-top: 5px;
+    aspect-ratio: 1/1;
 }
 
 #title-section {
@@ -171,10 +172,10 @@ header a {
 
 main {
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('../images/floral-paper-canvas-or-parchment.webp');
-    height: 900px;
+    padding-bottom: 100px;
 }
 
-main *:not(:first-child) {
+.narrow-main {
     margin: 0px auto;
     max-width: 900px;
     
@@ -246,11 +247,28 @@ button {
     background-color: var(--primary-purple);
     color: var(--accent2-white);
     padding: 10px;
+    margin: 10px;
     border: 0px;
     border-radius: 4px;
     font-size: 1rem;
 }
 
+.overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* attempt to darken during dialog */
+    z-index: 99;
+    display: none;
+  }
+
+dialog {
+    background-color: var(--accent2-white);
+    align-self: center;
+    justify-self: center;
+}
 
 /* unique to thank you page */
 #thank-you {
@@ -267,6 +285,84 @@ button {
     text-shadow: 2px 2px 4  px rgba(255, 255, 255, 0.3);
     font-size: 1.4rem;
 }
+
+
+
+/* Unique to Campaign Pages */
+.campaign-header {
+    padding: 20px;
+    background-color: var(--accent1-red);
+}
+
+.author {
+    margin-bottom: 20px;
+}
+
+.adventure {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.adventure-header {
+    margin: 10px 0px;
+
+    text-decoration: underline;
+    background-color: var(--accent1-red-rgba);
+}
+
+.flavor-text {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.DM-note {
+    margin-top: 20px;
+}
+
+
+
+/* hover modals */
+.container {
+    position: relative;
+    display: inline;
+}
+
+/* Ensure divs are displayed inline */
+.adventure-content, .hover-trigger, .modal {
+    display: inline;
+}
+
+/* Additional styling for modal */
+.hover-trigger {
+    position: relative;
+
+    color: var(--accent1-red);
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    bottom: 125%; /* Position above the sentence */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 10;
+    width: 200px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hover-trigger:hover .modal {
+    display: block;
+    opacity: 1;
+}
+
+
 
 
 
@@ -300,6 +396,10 @@ button {
 
     #last-modified {
         margin: 20px;
+    }
+
+    .adventure {
+        width: 90%;
     }
 }
 
