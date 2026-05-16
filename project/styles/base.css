@@ -218,7 +218,8 @@ main {
     margin: 20px;
     padding: 10px;
 
-    background-color: var(--accent1-red-rgba);
+    border-top: 4px solid var(--accent1-red);
+    border-bottom: 4px solid var(--accent1-red);
     border-radius: 10px;
 }
 
